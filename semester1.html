@@ -4,151 +4,185 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Semester 1 | The 4646 Notes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --grad-start: #e0e7ff;
-      --grad-end: #f8fafc;
+      --bg: #0f172a;
       --accent: #6366f1;
-      --text-dark: #0f172a;
-      --text-light: #64748b;
+      --periwinkle: #CCCCFF;
+      --glass: rgba(255, 255, 255, 0.03);
+      --border: rgba(255, 255, 255, 0.1);
+      --text-muted: #94a3b8;
     }
 
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-end) 100%);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      background-image: 
+        radial-gradient(at 0% 100%, rgba(99, 102, 241, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(204, 204, 255, 0.08) 0px, transparent 50%);
+      color: white;
       min-height: 100vh;
-      color: var(--text-dark);
       display: flex;
       justify-content: center;
     }
 
     .container {
       width: 90%;
-      max-width: 700px;
+      max-width: 900px;
       padding: 4rem 1rem;
     }
 
-    .back-link {
-      text-decoration: none;
-      color: var(--text-light);
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .back-link:hover {
-      color: var(--accent);
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin: 1.5rem 0 3rem 0;
-      letter-spacing: -0.04em;
-    }
-
-    /* Section Headings (Non-clickable) */
-    .section-header {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      font-weight: 600;
-      margin: 2.5rem 0 1rem 0;
-      border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-      padding-bottom: 0.5rem;
-    }
-
-    .list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .item {
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      padding: 1.25rem 1.5rem;
-      border-radius: 16px;
-      text-decoration: none;
-      color: var(--text-dark);
+    .nav-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      margin-bottom: 3rem;
     }
 
-    .item:hover {
-      transform: translateX(8px);
-      background: #ffffff;
-      border-color: var(--accent);
-      box-shadow: 0 10px 20px -10px rgba(0,0,0,0.05);
-    }
-
-    .item-title {
+    .back-btn {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.9rem;
       font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    .back-btn:hover {
+      background: var(--glass);
+      color: white;
+      border-color: var(--accent);
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 0;
+      letter-spacing: -2px;
+    }
+
+    /* Section Category Headings */
+    .category-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent);
+      font-weight: 800;
+      margin: 3rem 0 1.5rem 0;
+      display: block;
+    }
+
+    /* Grid for Chapters */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 1.5rem;
+      border-radius: 24px;
+      text-decoration: none;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .card:hover {
+      background: var(--periwinkle);
+      transform: translateY(-10px) scale(1.02);
+      border-color: var(--periwinkle);
+    }
+
+    .card:hover .title, .card:hover .author {
+      color: #0f172a;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      transition: color 0.3s;
     }
 
     .author {
       font-size: 0.85rem;
-      color: var(--text-light);
-      font-weight: 400;
+      color: var(--text-muted);
+      transition: color 0.3s;
     }
 
-    @media (max-width: 480px) {
-      .item { flex-direction: column; align-items: flex-start; gap: 4px; }
-      h1 { font-size: 2rem; }
+    @media (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
 
   <main class="container">
-    <a href="index.html" class="back-link">← Back to Semesters</a>
-    <h1>Semester 1</h1>
+    <div class="nav-header">
+      <a href="index.html" class="back-btn">← Back</a>
+      <div style="font-size: 0.8rem; font-weight: 800; color: var(--accent);">SEM 01</div>
+    </div>
 
-    <div class="section-header">Prose</div>
-    <div class="list">
-      <a href="astrologer.html" class="item">
-        <span class="item-title">An Astrologer’s Day</span>
+    <h1>Semester 1 Archive</h1>
+
+    <span class="category-label">Prose</span>
+    <div class="grid">
+      <a href="astrologer.html" class="card">
+        <span class="title">An Astrologer’s Day</span>
         <span class="author">R. K. Narayan</span>
       </a>
-      <a href="#" class="item">
-        <span class="item-title">The Swami and Mother-Worship</span>
+      <a href="#" class="card">
+        <span class="title">The Swami and Mother-Worship</span>
         <span class="author">Sister Nivedita</span>
       </a>
-      <a href="#" class="item">
-        <span class="item-title">Amarnath</span>
+      <a href="#" class="card">
+        <span class="title">Amarnath</span>
         <span class="author">Sister Nivedita</span>
       </a>
     </div>
 
-    <div class="section-header">Verse</div>
-    <div class="list">
-      <a href="#" class="item">
-        <span class="item-title">Composed Upon Westminster Bridge</span>
+    <span class="category-label">Verse</span>
+    <div class="grid">
+      <a href="#" class="card">
+        <span class="title">Composed Upon Westminster Bridge</span>
         <span class="author">William Wordsworth</span>
       </a>
-      <a href="#" class="item">
-        <span class="item-title">The Bangle Sellers</span>
+      <a href="#" class="card">
+        <span class="title">The Bangle Sellers</span>
         <span class="author">Sarojini Naidu</span>
       </a>
-      <a href="#" class="item">
-        <span class="item-title">The Second Coming</span>
+      <a href="#" class="card">
+        <span class="title">The Second Coming</span>
         <span class="author">W.B. Yeats</span>
       </a>
     </div>
 
-    <div class="section-header">Rapid Reader</div>
-    <div class="list">
-      <a href="#" class="item"><span class="item-title">Macbeth</span></a>
-      <a href="#" class="item"><span class="item-title">Othello</span></a>
-      <a href="#" class="item"><span class="item-title">As You Like It</span></a>
+    <span class="category-label">Rapid Reader</span>
+    <div class="grid">
+      <a href="#" class="card">
+        <span class="title">Macbeth</span>
+        <span class="author">William Shakespeare</span>
+      </a>
+      <a href="#" class="card">
+        <span class="title">Othello</span>
+        <span class="author">William Shakespeare</span>
+      </a>
+      <a href="#" class="card">
+        <span class="title">As You Like It</span>
+        <span class="author">William Shakespeare</span>
+      </a>
     </div>
   </main>
 
