@@ -9,7 +9,8 @@
   <style>
     :root {
       --bg: #0f172a;
-      --accent: #6366f1;
+      --accent: #6366f1; /* Indigo for static elements */
+      --periwinkle: #2171B5; /* Your specific hover color */
       --glass: rgba(255, 255, 255, 0.03);
       --border: rgba(255, 255, 255, 0.1);
     }
@@ -18,10 +19,9 @@
       margin: 0;
       font-family: 'Plus Jakarta Sans', sans-serif;
       background: var(--bg);
-      /* Subtle atmospheric glows */
       background-image: 
         radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(168, 85, 247, 0.12) 0px, transparent 50%);
+        radial-gradient(at 100% 100%, rgba(204, 204, 255, 0.1) 0px, transparent 50%);
       color: white;
       min-height: 100vh;
       display: flex;
@@ -30,7 +30,7 @@
     }
 
     .container {
-      width: 90%;
+      width: 95%;
       max-width: 900px;
       padding: 2rem;
     }
@@ -73,7 +73,6 @@
       font-weight: 300;
     }
 
-    /* Symmetrical Grid */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -88,19 +87,27 @@
       border-radius: 28px;
       text-decoration: none;
       color: white;
-      padding: 2.5rem 1.5rem;
+      padding: 3rem 1.5rem;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      /* The Rising Animation */
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
+    /* THE HOVER EFFECT */
     .card:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: var(--accent);
-      transform: translateY(-8px);
-      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+      background: var(--periwinkle); /* Changes to Periwinkle Blue */
+      border-color: var(--periwinkle);
+      transform: translateY(-12px); /* Rising animation */
+      box-shadow: 0 20px 40px -10px rgba(204, 204, 255, 0.3);
+    }
+
+    /* Text color change on hover for readability */
+    .card:hover .card-name, 
+    .card:hover .card-num {
+      color: #0f172a; /* Dark text for contrast against periwinkle */
     }
 
     .card-num {
@@ -108,19 +115,19 @@
       font-weight: 700;
       color: var(--accent);
       margin-bottom: 0.5rem;
-      opacity: 0.8;
+      transition: color 0.3s ease;
     }
 
     .card-name {
-      font-size: 1.25rem;
+      font-size: 1.3rem;
       font-weight: 600;
       letter-spacing: -0.5px;
+      transition: color 0.3s ease;
     }
 
     @media (max-width: 600px) {
       .grid { grid-template-columns: 1fr 1fr; gap: 1rem; }
-      .container { padding: 1rem; }
-      .card { padding: 1.5rem 1rem; }
+      .card { padding: 2rem 1rem; }
     }
   </style>
 </head>
