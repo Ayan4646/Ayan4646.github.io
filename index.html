@@ -2,10 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ayan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The 4646 Notes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-color: #f8fafc;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --accent: #3b82f6;
+      --card-bg: #ffffff;
+      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 800px;
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    h1 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.025em;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-weight: 300;
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+      text-transform: lowercase;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      padding: 2rem 1.5rem;
+      border-radius: 16px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 500;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(0,0,0,0.03);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* For a mobile-friendly touch */
+    @media (max-width: 480px) {
+      h1 { font-size: 2rem; }
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello 👋</h1>
-  <p>My website is live.</p>
+
+  <main class="container">
+    <h1>The 4646 Notes</h1>
+    <p class="subtitle">Select your semester</p>
+
+    <div class="grid">
+      <a href="semester1.html" class="card">Semester 1</a>
+      <a href="semester2.html" class="card">Semester 2</a>
+      <a href="semester3.html" class="card">Semester 3</a>
+      <a href="semester4.html" class="card">Semester 4</a>
+    </div>
+  </main>
+
 </body>
 </html>
