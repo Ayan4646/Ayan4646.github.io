@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semester 1 | The 4646 Notes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --grad-start: #e0e7ff;
+      --grad-end: #f8fafc;
+      --accent: #6366f1;
+      --text-dark: #0f172a;
+      --text-light: #64748b;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-end) 100%);
+      min-height: 100vh;
+      color: var(--text-dark);
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 700px;
+      padding: 4rem 1rem;
+    }
+
+    .back-link {
+      text-decoration: none;
+      color: var(--text-light);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin: 1.5rem 0 3rem 0;
+      letter-spacing: -0.04em;
+    }
+
+    /* Section Headings (Non-clickable) */
+    .section-header {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      font-weight: 600;
+      margin: 2.5rem 0 1rem 0;
+      border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+      padding-bottom: 0.5rem;
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .item {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 1.25rem 1.5rem;
+      border-radius: 16px;
+      text-decoration: none;
+      color: var(--text-dark);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .item:hover {
+      transform: translateX(8px);
+      background: #ffffff;
+      border-color: var(--accent);
+      box-shadow: 0 10px 20px -10px rgba(0,0,0,0.05);
+    }
+
+    .item-title {
+      font-weight: 500;
+    }
+
+    .author {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-weight: 400;
+    }
+
+    @media (max-width: 480px) {
+      .item { flex-direction: column; align-items: flex-start; gap: 4px; }
+      h1 { font-size: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <a href="index.html" class="back-link">← Back to Semesters</a>
+    <h1>Semester 1</h1>
+
+    <div class="section-header">Prose</div>
+    <div class="list">
+      <a href="#" class="item">
+        <span class="item-title">An Astrologer’s Day</span>
+        <span class="author">R. K. Narayan</span>
+      </a>
+      <a href="#" class="item">
+        <span class="item-title">The Swami and Mother-Worship</span>
+        <span class="author">Sister Nivedita</span>
+      </a>
+      <a href="#" class="item">
+        <span class="item-title">Amarnath</span>
+        <span class="author">Sister Nivedita</span>
+      </a>
+    </div>
+
+    <div class="section-header">Verse</div>
+    <div class="list">
+      <a href="#" class="item">
+        <span class="item-title">Composed Upon Westminster Bridge</span>
+        <span class="author">William Wordsworth</span>
+      </a>
+      <a href="#" class="item">
+        <span class="item-title">The Bangle Sellers</span>
+        <span class="author">Sarojini Naidu</span>
+      </a>
+      <a href="#" class="item">
+        <span class="item-title">The Second Coming</span>
+        <span class="author">W.B. Yeats</span>
+      </a>
+    </div>
+
+    <div class="section-header">Rapid Reader</div>
+    <div class="list">
+      <a href="#" class="item"><span class="item-title">Macbeth</span></a>
+      <a href="#" class="item"><span class="item-title">Othello</span></a>
+      <a href="#" class="item"><span class="item-title">As You Like It</span></a>
+    </div>
+  </main>
+
+</body>
+</html>
