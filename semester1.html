@@ -1,156 +1,883 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Semester 1 | The 4646 Notes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --grad-start: #e0e7ff;
-      --grad-end: #f8fafc;
-      --accent: #6366f1;
-      --text-dark: #0f172a;
-      --text-light: #64748b;
-    }
+    <meta charset="UTF-8">
+    <title>An Astrologer’s Day – MCQs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --bg: #f7f7f9;
+            --card: #ffffff;
+            --text: #2c2c2c;
+            --muted: #666;
+            --accent: #2563eb;
+            --border: #e5e7eb;
+        }
 
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-end) 100%);
-      min-height: 100vh;
-      color: var(--text-dark);
-      display: flex;
-      justify-content: center;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    .container {
-      width: 90%;
-      max-width: 700px;
-      padding: 4rem 1rem;
-    }
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-    .back-link {
-      text-decoration: none;
-      color: var(--text-light);
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 32px 20px;
+        }
 
-    .back-link:hover {
-      color: var(--accent);
-    }
+        h1 {
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
 
-    h1 {
-      font-size: 2.5rem;
-      margin: 1.5rem 0 3rem 0;
-      letter-spacing: -0.04em;
-    }
+        h2 {
+            margin-top: 40px;
+            font-size: 1.6rem;
+            border-left: 5px solid var(--accent);
+            padding-left: 12px;
+        }
 
-    /* Section Headings (Non-clickable) */
-    .section-header {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--accent);
-      font-weight: 600;
-      margin: 2.5rem 0 1rem 0;
-      border-bottom: 1px solid rgba(99, 102, 241, 0.2);
-      padding-bottom: 0.5rem;
-    }
+        h3 {
+            margin-top: 30px;
+            color: var(--accent);
+        }
 
-    .list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
+        p {
+            color: var(--muted);
+        }
 
-    .item {
-      background: rgba(255, 255, 255, 0.6);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      padding: 1.25rem 1.5rem;
-      border-radius: 16px;
-      text-decoration: none;
-      color: var(--text-dark);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-    }
+        .card {
+            background: var(--card);
+            border-radius: 10px;
+            padding: 24px;
+            margin-top: 24px;
+            border: 1px solid var(--border);
+        }
 
-    .item:hover {
-      transform: translateX(8px);
-      background: #ffffff;
-      border-color: var(--accent);
-      box-shadow: 0 10px 20px -10px rgba(0,0,0,0.05);
-    }
+        .mcq {
+            padding: 14px 0;
+            border-bottom: 1px dashed var(--border);
+        }
 
-    .item-title {
-      font-weight: 500;
-    }
+        .mcq:last-child {
+            border-bottom: none;
+        }
 
-    .author {
-      font-size: 0.85rem;
-      color: var(--text-light);
-      font-weight: 400;
-    }
+        .question {
+            font-weight: 600;
+        }
 
-    @media (max-width: 480px) {
-      .item { flex-direction: column; align-items: flex-start; gap: 4px; }
-      h1 { font-size: 2rem; }
-    }
-  </style>
+        .answer {
+            margin-top: 4px;
+            color: var(--accent);
+        }
+
+        footer {
+            margin: 60px 0 20px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
 
-  <main class="container">
-    <a href="index.html" class="back-link">← Back to Semesters</a>
-    <h1>Semester 1</h1>
+<div class="container">
+    <h1>An Astrologer’s Day – Complete MCQs</h1>
 
-    <div class="section-header">Prose</div>
-    <div class="list">
-      <a href="astrologer.html" class="item">
-        <span class="item-title">An Astrologer’s Day</span>
-        <span class="author">R. K. Narayan</span>
-      </a>
-      <a href="#" class="item">
-        <span class="item-title">The Swami and Mother-Worship</span>
-        <span class="author">Sister Nivedita</span>
-      </a>
-      <a href="#" class="item">
-        <span class="item-title">Amarnath</span>
-        <span class="author">Sister Nivedita</span>
-      </a>
-    </div>
+    <section class="card">
+        <h2>About the Author</h2>
+        <p>
+            R. K. Narayan (1906–2001) was one of India’s most celebrated English-language writers.
+            He created the fictional town of Malgudi to portray Indian middle-class life.
+            His writing is marked by simplicity, gentle humour, irony, and deep insight into
+            ordinary human behaviour.
+        </p>
+    </section>
 
-    <div class="section-header">Verse</div>
-    <div class="list">
-      <a href="#" class="item">
-        <span class="item-title">Composed Upon Westminster Bridge</span>
-        <span class="author">William Wordsworth</span>
-      </a>
-      <a href="#" class="item">
-        <span class="item-title">The Bangle Sellers</span>
-        <span class="author">Sarojini Naidu</span>
-      </a>
-      <a href="#" class="item">
-        <span class="item-title">The Second Coming</span>
-        <span class="author">W.B. Yeats</span>
-      </a>
-    </div>
+    <section class="card">
+        <h2>About the Text</h2>
+        <p>
+            The extract is from <em>An Astrologer’s Day</em>, a short story by R. K. Narayan.
+            It depicts an astrologer who survives through clever observation rather than true
+            astrology. The story explores fate, irony, coincidence, superstition, and the return
+            of one’s hidden past.
+        </p>
+    </section>
 
-    <div class="section-header">Rapid Reader</div>
-    <div class="list">
-      <a href="#" class="item"><span class="item-title">Macbeth</span></a>
-      <a href="#" class="item"><span class="item-title">Othello</span></a>
-      <a href="#" class="item"><span class="item-title">As You Like It</span></a>
-    </div>
-  </main>
+    <section class="card">
+        <h2>MCQs</h2>
+
+        <h3>MCQs on the Author</h3>
+
+        <div class="mcq">
+            <div class="question">1. Who was R. K. Narayan?</div>
+            <div class="answer">Answer: A novelist and short story writer</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">2. In which language did R. K. Narayan mainly write?</div>
+            <div class="answer">Answer: English</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">3. What is the fictional town created by R. K. Narayan?</div>
+            <div class="answer">Answer: Malgudi</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">4. Which term best describes his writing style?</div>
+            <div class="answer">Answer: Simple and humorous</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">5. “An Astrologer’s Day” is a —</div>
+            <div class="answer">Answer: Short story</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">6. R. K. Narayan mainly portrayed —</div>
+            <div class="answer">Answer: Indian middle-class life</div>
+        </div>
+
+        <h3>MCQs on the Text</h3>
+
+        <div class="mcq">
+            <div class="question">7. The extract is taken from which story?</div>
+            <div class="answer">Answer: An Astrologer’s Day</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">8. The text belongs to which literary form?</div>
+            <div class="answer">Answer: Short story</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">9. Who is the central character of the story?</div>
+            <div class="answer">Answer: An astrologer</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">10. Where is the story mainly set?</div>
+            <div class="answer">Answer: A park and marketplace</div>
+        </div>
+
+        <h3>MCQs on the Content</h3>
+
+        <div class="mcq">
+            <div class="question">11. At what time did the astrologer open his bag?</div>
+            <div class="answer">Answer: Midday</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">12. What was part of the astrologer’s equipment?</div>
+            <div class="answer">Answer: Cowrie shells</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">13. Where was the sacred ash applied?</div>
+            <div class="answer">Answer: On the forehead</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">14. Why did the astrologer’s eyes sparkle?</div>
+            <div class="answer">Answer: He was constantly searching for customers</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">15. What was the colour of the astrologer’s turban?</div>
+            <div class="answer">Answer: Saffron</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">16. People were attracted to the astrologer like —</div>
+            <div class="answer">Answer: Bees to flowers</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">17. Under which tree did the astrologer sit?</div>
+            <div class="answer">Answer: Tamarind tree</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">18. What was the name of the park?</div>
+            <div class="answer">Answer: Town Hall Park</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">19. The road near the astrologer was always —</div>
+            <div class="answer">Answer: Crowded</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">20. Who was the noisiest trader?</div>
+            <div class="answer">Answer: Auctioneer of cheap cloth</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">21. Why did the groundnut seller rename his goods?</div>
+            <div class="answer">Answer: To attract customers</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">22. The astrologer worked by the light of —</div>
+            <div class="answer">Answer: A flare</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">23. What facility was missing in the area?</div>
+            <div class="answer">Answer: Municipal lighting</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">24. The atmosphere was created by —</div>
+            <div class="answer">Answer: A criss-cross of lights and shadows</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">25. Did the astrologer plan to become an astrologer?</div>
+            <div class="answer">Answer: No</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">26. His success depended mainly on —</div>
+            <div class="answer">Answer: Practice and shrewd guesswork</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">27. Why did the astrologer leave his village?</div>
+            <div class="answer">Answer: He was involved in a violent incident</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">28. What occupation would he have followed in the village?</div>
+            <div class="answer">Answer: Farming</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">29. What problems did he usually deal with?</div>
+            <div class="answer">Answer: Marriage and money</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">30. How much did he charge per question?</div>
+            <div class="answer">Answer: Three pies</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">31. Why did he let clients talk first?</div>
+            <div class="answer">Answer: To gather information</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">32. Which statement usually satisfied clients?</div>
+            <div class="answer">Answer: They were not getting full results for their efforts</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">33. Saturn symbolized —</div>
+            <div class="answer">Answer: A rough and impetuous nature</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">34. Clients liked to believe they had a —</div>
+            <div class="answer">Answer: Forbidding exterior</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">35. What signalled the astrologer to stop work?</div>
+            <div class="answer">Answer: The groundnut vendor leaving</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">36. From where did the green shaft of light come?</div>
+            <div class="answer">Answer: A nearby shop</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">37. When did the stranger approach him?</div>
+            <div class="answer">Answer: While he was packing up</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">38. How did the stranger challenge him?</div>
+            <div class="answer">Answer: By thrusting his palm forward</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">39. Why did the astrologer feel frightened?</div>
+            <div class="answer">Answer: He recognized the stranger</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">40. What coin did the stranger give first?</div>
+            <div class="answer">Answer: One anna</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">41. Payment depended on —</div>
+            <div class="answer">Answer: Correctness of the answers</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">42. Whom did the astrologer pray to?</div>
+            <div class="answer">Answer: Heaven</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">43. How did he recognise the stranger?</div>
+            <div class="answer">Answer: By the matchlight</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">44. What was the stranger smoking?</div>
+            <div class="answer">Answer: A cheroot</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">45. What troubled the astrologer most?</div>
+            <div class="answer">Answer: Fear of exposure of his past</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">46. What injury did the astrologer describe?</div>
+            <div class="answer">Answer: A knife wound</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">47. What proved the astrologer’s prediction true?</div>
+            <div class="answer">Answer: The scar on the stranger’s chest</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">48. What was the stranger’s name?</div>
+            <div class="answer">Answer: Guru Nayak</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">49. Why had Guru Nayak come?</div>
+            <div class="answer">Answer: To find the man who attacked him</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">50. What did the astrologer say about the attacker?</div>
+            <div class="answer">Answer: He was dead</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">51. What advice did the astrologer give Guru Nayak?</div>
+            <div class="answer">Answer: To return to his village</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">52. Which direction was Guru Nayak warned not to travel?</div>
+            <div class="answer">Answer: South</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">53. Why was Guru Nayak satisfied at the end of the meeting?</div>
+            <div class="answer">Answer: He believed his enemy was dead</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">54. What did the astrologer finally receive from Guru Nayak?</div>
+            <div class="answer">Answer: A handful of coins</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">55. By what time was the place deserted?</div>
+            <div class="answer">Answer: Midnight</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">56. When did the astrologer reach home?</div>
+            <div class="answer">Answer: Late at night</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">57. Who was waiting for the astrologer at home?</div>
+            <div class="answer">Answer: His wife</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">58. How much money did his wife count?</div>
+            <div class="answer">Answer: Twelve and a half annas</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">59. What did his wife plan to buy?</div>
+            <div class="answer">Answer: Sweets</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">60. Why was the astrologer still worried?</div>
+            <div class="answer">Answer: He was troubled by his past guilt</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">61. Where had the astrologer attacked Guru Nayak?</div>
+            <div class="answer">Answer: In his village</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">62. Why did the astrologer run away from home?</div>
+            <div class="answer">Answer: He thought he had killed a man</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">63. What is the main irony of the story?</div>
+            <div class="answer">Answer: The astrologer meets the man he tried to kill</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">64. Which theme dominates the story?</div>
+            <div class="answer">Answer: Fate and coincidence</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">65. On what does the astrologer’s success mainly depend?</div>
+            <div class="answer">Answer: His understanding of human psychology</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">66. What feeling dominates the ending of the story?</div>
+            <div class="answer">Answer: Relief</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">67. What changed the astrologer’s life completely?</div>
+            <div class="answer">Answer: A violent act committed in his youth</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">68. What does the crowd in the story symbolize?</div>
+            <div class="answer">Answer: The chaos of life</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">69. What does the story reveal about common people?</div>
+            <div class="answer">Answer: They are easily fooled by appearances</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">70. What is the tone of the story?</div>
+            <div class="answer">Answer: Comic and ironic</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">71. How is the astrologer portrayed in the story?</div>
+            <div class="answer">Answer: Clever and human</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">72. What does the story suggest about fate?</div>
+            <div class="answer">Answer: It is influenced by chance</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">73. What is emphasized in the conclusion?</div>
+            <div class="answer">Answer: Coincidence</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">74. What caused the astrologer’s greatest fear?</div>
+            <div class="answer">Answer: Recognition by Guru Nayak</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">75. What kind of life does the story depict?</div>
+            <div class="answer">Answer: Ordinary Indian life</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">76. What did the astrologer use to enhance his appearance?</div>
+            <div class="answer">Answer: Sacred ash, vermilion, and a saffron turban</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">77. What made the astrologer’s eyes appear powerful?</div>
+            <div class="answer">Answer: Their position between painted forehead and whiskers</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">78. Who mistook the astrologer’s sharp look for divine power?</div>
+            <div class="answer">Answer: His simple clients</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">79. What kind of writing did the astrologer carry?</div>
+            <div class="answer">Answer: Palmyra writing</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">80. Why did the astrologer’s setup attract people?</div>
+            <div class="answer">Answer: His calculated appearance and behaviour</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">81. What kind of crowd moved along the road?</div>
+            <div class="answer">Answer: A crowd representing many trades and occupations</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">82. Who was second only to the auctioneer in loudness?</div>
+            <div class="answer">Answer: The groundnut vendor</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">83. What fancy name was given to groundnuts?</div>
+            <div class="answer">Answer: Bombay Ice-cream</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">84. Why did people gather around the astrologer?</div>
+            <div class="answer">Answer: Curiosity and belief in his predictions</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">85. What added to the enchantment of the place?</div>
+            <div class="answer">Answer: Absence of proper lighting</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">86. What kind of lights did some shops use?</div>
+            <div class="answer">Answer: Hissing gaslights</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">87. Why did the dim lighting suit the astrologer?</div>
+            <div class="answer">Answer: It hid his lack of real astrological knowledge</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">88. What did the astrologer know about the stars?</div>
+            <div class="answer">Answer: Nothing</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">89. Why was his work still considered honest labour?</div>
+            <div class="answer">Answer: He used skill and effort to earn his living</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">90. How far did the astrologer travel from his village?</div>
+            <div class="answer">Answer: A couple of hundred miles</div>
+        </div>
+
+              <div class="mcq">
+            <div class="question">91. To a villager, what did the distance from home feel like?</div>
+            <div class="answer">Answer: As vast as an ocean</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">92. What sharpened the astrologer’s perception of people?</div>
+            <div class="answer">Answer: Long practice</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">93. How long did clients usually speak before the astrologer replied?</div>
+            <div class="answer">Answer: About ten minutes</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">94. Why was this time useful to the astrologer?</div>
+            <div class="answer">Answer: It provided material for his advice</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">95. What question did the astrologer often ask about women in the family?</div>
+            <div class="answer">Answer: Whether any woman was ill-disposed toward the client</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">96. Which planet did the astrologer frequently mention?</div>
+            <div class="answer">Answer: Saturn</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">97. What human weakness did the astrologer exploit?</div>
+            <div class="answer">Answer: The desire for validation</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">98. Who extinguished the flare near the astrologer?</div>
+            <div class="answer">Answer: The groundnut vendor</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">99. What did the growing darkness force the astrologer to do?</div>
+            <div class="answer">Answer: Begin packing up his belongings</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">100. What made the astrologer expect another client?</div>
+            <div class="answer">Answer: A man standing before him</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">101. How did the astrologer first address the stranger?</div>
+            <div class="answer">Answer: With sympathy and concern</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">102. How did the stranger initially respond?</div>
+            <div class="answer">Answer: Rudely and suspiciously</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">103. What emotion did the challenge arouse in the astrologer?</div>
+            <div class="answer">Answer: Annoyance</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">104. Why did the astrologer hesitate to continue?</div>
+            <div class="answer">Answer: He felt threatened</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">105. What increased the tension during the encounter?</div>
+            <div class="answer">Answer: Noise from traffic and crowds</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">106. What physical reaction showed the astrologer’s fear?</div>
+            <div class="answer">Answer: His voice trembled</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">107. Why couldn’t the astrologer withdraw from the deal?</div>
+            <div class="answer">Answer: The stranger held his wrist</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">108. What question did the stranger demand to be answered?</div>
+            <div class="answer">Answer: Whether he would succeed in his search</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">109. What did the astrologer threaten to do if unpaid?</div>
+            <div class="answer">Answer: Remain silent</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">110. What proved the astrologer’s answer convincing?</div>
+            <div class="answer">Answer: Accurate details of the past attack</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">111. What did the astrologer say happened after the stabbing?</div>
+            <div class="answer">Answer: The man was pushed into a well</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">112. Why was Guru Nayak astonished?</div>
+            <div class="answer">Answer: The details were true</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">113. What emotion overtook Guru Nayak?</div>
+            <div class="answer">Answer: Excitement</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">114. What did Guru Nayak want next?</div>
+            <div class="answer">Answer: Revenge</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">115. How did the astrologer prevent revenge?</div>
+            <div class="answer">Answer: By saying the enemy was dead</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">116. Why did the astrologer invent the enemy’s death?</div>
+            <div class="answer">Answer: To save himself</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">117. What vehicle was said to have killed the enemy?</div>
+            <div class="answer">Answer: A lorry</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">118. Why did Guru Nayak feel relieved?</div>
+            <div class="answer">Answer: He believed justice had been done</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">119. What ritual did the astrologer suggest?</div>
+            <div class="answer">Answer: Applying sacred ash on the forehead</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">120. What promise did the astrologer make about Guru Nayak’s life?</div>
+            <div class="answer">Answer: He would live to be a hundred</div>
+        </div>
+
+              <div class="mcq">
+            <div class="question">121. What shows Guru Nayak’s violent nature?</div>
+            <div class="answer">Answer: His desire to kill his enemy</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">122. Why did the astrologer feel victorious?</div>
+            <div class="answer">Answer: He escaped danger</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">123. What happened to the green shaft of light?</div>
+            <div class="answer">Answer: It disappeared</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">124. What mood replaced the market noise?</div>
+            <div class="answer">Answer: Silence</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">125. What did Guru Nayak leave behind?</div>
+            <div class="answer">Answer: Coins</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">126. How did the astrologer feel while returning home?</div>
+            <div class="answer">Answer: Relieved but shaken</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">127. Why was the astrologer’s wife happy?</div>
+            <div class="answer">Answer: He had earned more money</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">128. What domestic need is highlighted in the story?</div>
+            <div class="answer">Answer: Buying food for the child</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">129. What does the child’s desire for sweets symbolize?</div>
+            <div class="answer">Answer: Simple family happiness</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">130. Why did the astrologer complain of being cheated?</div>
+            <div class="answer">Answer: He expected a rupee</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">131. Why did he still feel anxious?</div>
+            <div class="answer">Answer: Fear of his past guilt</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">132. What confession did the astrologer make to his wife?</div>
+            <div class="answer">Answer: He had tried to kill a man</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">133. How did his wife react to the confession?</div>
+            <div class="answer">Answer: With shock</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">134. What does the confession reveal about the astrologer?</div>
+            <div class="answer">Answer: His burdened conscience</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">135. Why did the astrologer marry and settle in the town?</div>
+            <div class="answer">Answer: To escape his past</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">136. What finally eased the astrologer’s guilt?</div>
+            <div class="answer">Answer: Knowing Guru Nayak was alive</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">137. What does the pyol symbolize?</div>
+            <div class="answer">Answer: Ordinary domestic life</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">138. How does the astrologer end his day?</div>
+            <div class="answer">Answer: By sleeping peacefully</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">139. What lesson does the story convey?</div>
+            <div class="answer">Answer: Past actions return unexpectedly</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">140. What role does coincidence play in the story?</div>
+            <div class="answer">Answer: It drives the plot</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">141. What social reality is exposed?</div>
+            <div class="answer">Answer: Superstition</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">142. What quality saves the astrologer?</div>
+            <div class="answer">Answer: Presence of mind</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">143. What does the story criticize indirectly?</div>
+            <div class="answer">Answer: Blind faith in astrology</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">144. What human instinct is central to the story?</div>
+            <div class="answer">Answer: Fear</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">145. What makes the ending satisfying?</div>
+            <div class="answer">Answer: Resolution without violence</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">146. What aspect of life is emphasized?</div>
+            <div class="answer">Answer: Uncertainty</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">147. What narrative technique dominates the story?</div>
+            <div class="answer">Answer: Irony</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">148. What does the astrologer finally gain the most?</div>
+            <div class="answer">Answer: Peace of mind</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">149. What kind of character is Guru Nayak?</div>
+            <div class="answer">Answer: Vengeful</div>
+        </div>
+
+        <div class="mcq">
+            <div class="question">150. What is the ultimate theme of the story?</div>
+            <div class="answer">Answer: Fate and irony</div>
+        </div>
+
+    </section>
+
+    <footer>
+        © Study Material – An Astrologer’s Day | Clean & Exam-Ready Layout
+    </footer>
+</div>
 
 </body>
 </html>
