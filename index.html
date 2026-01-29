@@ -4,96 +4,115 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The 4646 Notes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --bg-color: #f8fafc;
-      --text-main: #1e293b;
-      --text-muted: #64748b;
-      --accent: #3b82f6;
-      --card-bg: #ffffff;
-      --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-      --shadow-hover: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      /* Soft Modern Gradient Colors */
+      --grad-start: #e0e7ff;
+      --grad-end: #f8fafc;
+      --accent: #6366f1;
+      --text-dark: #0f172a;
+      --text-light: #64748b;
     }
 
     body {
       margin: 0;
       padding: 0;
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-main);
+      /* Subtle gradient background */
+      background: linear-gradient(135deg, var(--grad-start) 0%, var(--grad-end) 100%);
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      color: var(--text-dark);
     }
 
     .container {
       width: 90%;
-      max-width: 800px;
+      max-width: 900px;
       text-align: center;
-      padding: 2rem 0;
+      padding: 3rem 1rem;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(99, 102, 241, 0.1);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
     }
 
     h1 {
-      font-weight: 700;
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: -0.025em;
+      font-size: clamp(2.5rem, 8vw, 3.5rem);
+      font-weight: 600;
+      margin: 0;
+      letter-spacing: -0.04em;
     }
 
     .subtitle {
-      color: var(--text-muted);
-      font-weight: 300;
+      color: var(--text-light);
       font-size: 1.1rem;
-      margin-bottom: 3rem;
-      text-transform: lowercase;
+      margin: 1rem 0 3.5rem 0;
+      font-weight: 300;
     }
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 1.5rem;
     }
 
     .card {
-      background: var(--card-bg);
-      padding: 2rem 1.5rem;
-      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.7); /* Glass effect */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 2.5rem 1.5rem;
+      border-radius: 24px;
       text-decoration: none;
-      color: var(--text-main);
+      color: var(--text-dark);
       font-weight: 500;
-      box-shadow: var(--shadow);
-      transition: all 0.3s ease;
-      border: 1px solid rgba(0,0,0,0.03);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);
     }
 
     .card:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-hover);
-      color: var(--accent);
+      transform: translateY(-8px);
+      background: #ffffff;
+      box-shadow: 0 20px 40px -15px rgba(99, 102, 241, 0.2);
       border-color: var(--accent);
     }
 
-    /* For a mobile-friendly touch */
-    @media (max-width: 480px) {
-      h1 { font-size: 2rem; }
-      .grid { grid-template-columns: 1fr 1fr; }
+    .card-title {
+      display: block;
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+      .container { padding: 2rem 1.5rem; }
     }
   </style>
 </head>
 <body>
 
   <main class="container">
+    <div class="badge">English Notes • Class 11 & 12</div>
     <h1>The 4646 Notes</h1>
-    <p class="subtitle">Select your semester</p>
+    <p class="subtitle">Select your semester to begin</p>
 
     <div class="grid">
-      <a href="semester1.html" class="card">Semester 1</a>
-      <a href="semester2.html" class="card">Semester 2</a>
-      <a href="semester3.html" class="card">Semester 3</a>
-      <a href="semester4.html" class="card">Semester 4</a>
+      <a href="semester1.html" class="card"><span class="card-title">Semester 1</span></a>
+      <a href="semester2.html" class="card"><span class="card-title">Semester 2</span></a>
+      <a href="semester3.html" class="card"><span class="card-title">Semester 3</span></a>
+      <a href="semester4.html" class="card"><span class="card-title">Semester 4</span></a>
     </div>
   </main>
 
